@@ -1,0 +1,16 @@
+﻿@model ASP.NetCoreMVCFileValidationDemo.ViewModels.UploadFileViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="w-50 m-auto">
+    <form asp-controller="home" asp-action="index" method="post" enctype="multipart/form-data">
+        <div class="form-group mb-2">
+            <input asp-for="File" class="form-control" />
+            <span class="text-danger" asp-validation-for="File"></span>
+        </div>
+
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
